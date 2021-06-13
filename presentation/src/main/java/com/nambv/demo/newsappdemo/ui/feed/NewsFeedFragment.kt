@@ -39,12 +39,12 @@ class NewsFeedFragment : BaseFragment<FragmentNewsFeedBinding, NewsFeedViewModel
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setupForLisNews()
+        setupForListNews()
         subscriberUI()
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")
-    private fun setupForLisNews() {
+    private fun setupForListNews() {
         binding.listNews.run {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = mNewFeedAdapter

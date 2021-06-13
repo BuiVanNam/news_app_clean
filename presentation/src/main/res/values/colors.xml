@@ -12,5 +12,7 @@
     <color name="colorPlaceHolder">#17000000</color>
     <color name="colorDivider">#17000000</color>
     <color name="colorBackgroundNav">#ffffff</color>
+    <color name="colorItemMenu">#111111</color>
+
 
 </resources>

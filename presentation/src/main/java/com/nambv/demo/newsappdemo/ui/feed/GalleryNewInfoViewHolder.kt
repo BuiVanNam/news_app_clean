@@ -5,6 +5,7 @@ import com.nambv.demo.domain.model.feed.NewInfoModel
 import com.nambv.demo.newsappdemo.databinding.ItemNewGalleryBinding
 import com.nambv.demo.newsappdemo.utils.DEFAULT_SIZE_HEIGHT_LOAD_IMAGE
 import com.nambv.demo.newsappdemo.utils.DEFAULT_SIZE_WIDTH_LOAD_IMAGE
+import com.nambv.demo.newsappdemo.utils.loadImage
 
 /**
  * Created by nambv on 6/13/2021
@@ -32,29 +33,33 @@ class GalleryNewInfoViewHolder(private val binding: ItemNewGalleryBinding) :
 
             }
 
-            requestManager
-                .load(image1)
-                .placeholder(placeHolderDrawable)
-                .error(placeHolderDrawable)
-                .override(DEFAULT_SIZE_WIDTH_LOAD_IMAGE, DEFAULT_SIZE_HEIGHT_LOAD_IMAGE)
-                .centerCrop()
-                .into(binding.thumbImage01)
+            binding.thumbImage01.loadImage(
+                requestManager,
+                placeHolderDrawable,
+                placeHolderDrawable,
+                image1,
+                DEFAULT_SIZE_WIDTH_LOAD_IMAGE,
+                DEFAULT_SIZE_HEIGHT_LOAD_IMAGE
+            )
 
-            requestManager
-                .load(image2)
-                .placeholder(placeHolderDrawable)
-                .error(placeHolderDrawable)
-                .override(DEFAULT_SIZE_WIDTH_LOAD_IMAGE, DEFAULT_SIZE_HEIGHT_LOAD_IMAGE)
-                .centerCrop()
-                .into(binding.thumbImage02)
+            binding.thumbImage02.loadImage(
+                requestManager,
+                placeHolderDrawable,
+                placeHolderDrawable,
+                image2,
+                DEFAULT_SIZE_WIDTH_LOAD_IMAGE,
+                DEFAULT_SIZE_HEIGHT_LOAD_IMAGE
+            )
 
-            requestManager
-                .load(image3)
-                .placeholder(placeHolderDrawable)
-                .error(placeHolderDrawable)
-                .override(DEFAULT_SIZE_WIDTH_LOAD_IMAGE, DEFAULT_SIZE_HEIGHT_LOAD_IMAGE)
-                .centerCrop()
-                .into(binding.thumbImage03)
+            binding.thumbImage03.loadImage(
+                requestManager,
+                placeHolderDrawable,
+                placeHolderDrawable,
+                image3,
+                DEFAULT_SIZE_WIDTH_LOAD_IMAGE,
+                DEFAULT_SIZE_HEIGHT_LOAD_IMAGE
+            )
+
         }
     }
 

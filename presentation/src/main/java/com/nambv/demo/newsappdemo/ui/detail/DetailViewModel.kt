@@ -9,7 +9,7 @@ import com.nambv.demo.domain.model.base.BaseContentSessionDetail
 import com.nambv.demo.domain.model.detail.DetailNewInfoModel
 import com.nambv.demo.domain.usecases.GetDetailNewUseCase
 import com.nambv.demo.newsappdemo.ui.common.BaseViewModel
-import com.nambv.demo.newsappdemo.utils.ResourceDataDetailNewMapper
+import com.nambv.demo.newsappdemo.utils.DetailNewMapper
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
@@ -25,12 +25,9 @@ class DetailViewModel @Inject constructor(
 
     private val _detailNewFeed = useCase
         .getDetailNewData()
-        .map {
-            ResourceDataDetailNewMapper.mapModel(it)
-        }
         .asLiveData(viewModelScope.coroutineContext)
 
-    val detailNewFeed: LiveData<ResourceData<List<BaseContentSessionDetail>>>
+    val detailNewFeed: LiveData<ResourceData<DetailNewInfoModel>>
         get() = _detailNewFeed
 
 }

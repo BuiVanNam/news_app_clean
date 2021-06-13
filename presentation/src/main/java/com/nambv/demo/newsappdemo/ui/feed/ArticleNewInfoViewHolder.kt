@@ -10,6 +10,7 @@ import com.nambv.demo.newsappdemo.R
 import com.nambv.demo.newsappdemo.databinding.ItemNewArticleBinding
 import com.nambv.demo.newsappdemo.utils.DEFAULT_SIZE_HEIGHT_LOAD_IMAGE
 import com.nambv.demo.newsappdemo.utils.DEFAULT_SIZE_WIDTH_LOAD_IMAGE
+import com.nambv.demo.newsappdemo.utils.loadImage
 
 /**
  * Created by nambv on 6/13/2021
@@ -37,13 +38,14 @@ class ArticleNewInfoViewHolder(private val binding: ItemNewArticleBinding) :
             binding.titleNew.text = title
             binding.desNew.text = description
             binding.publisherNew.text = publisherNewModel?.name + " . " + publishedDate
-            requestManager
-                .load(mainImage)
-                .placeholder(placeHolderDrawable)
-                .error(placeHolderDrawable)
-                .override(DEFAULT_SIZE_WIDTH_LOAD_IMAGE, DEFAULT_SIZE_HEIGHT_LOAD_IMAGE)
-                .centerCrop()
-                .into(binding.thumbImage)
+            binding.thumbImage.loadImage(
+                requestManager,
+                placeHolderDrawable,
+                placeHolderDrawable,
+                mainImage,
+                DEFAULT_SIZE_WIDTH_LOAD_IMAGE,
+                DEFAULT_SIZE_HEIGHT_LOAD_IMAGE
+            )
         }
     }
 
