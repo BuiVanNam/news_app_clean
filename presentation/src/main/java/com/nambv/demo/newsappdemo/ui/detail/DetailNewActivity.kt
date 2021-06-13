@@ -1,9 +1,9 @@
-package com.nambv.demo.newsappdemo.detail
+package com.nambv.demo.newsappdemo.ui.detail
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.activity.viewModels
-import com.nambv.demo.newsappdemo.common.BaseActivity
+import com.nambv.demo.newsappdemo.ui.common.BaseActivity
 import com.nambv.demo.newsappdemo.databinding.ActivityDetailNewBinding
 import dagger.hilt.android.AndroidEntryPoint
 

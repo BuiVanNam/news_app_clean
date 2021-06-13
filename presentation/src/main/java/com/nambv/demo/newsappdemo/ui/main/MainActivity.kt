@@ -1,4 +1,4 @@
-package com.nambv.demo.newsappdemo.main
+package com.nambv.demo.newsappdemo.ui.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,8 +6,8 @@ import androidx.activity.viewModels
 import androidx.fragment.app.commit
 import androidx.lifecycle.lifecycleScope
 import com.nambv.demo.newsappdemo.R
-import com.nambv.demo.newsappdemo.common.BaseActivity
-import com.nambv.demo.newsappdemo.common.FragmentFactory
+import com.nambv.demo.newsappdemo.ui.common.BaseActivity
+import com.nambv.demo.newsappdemo.ui.common.FragmentFactory
 import com.nambv.demo.newsappdemo.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 

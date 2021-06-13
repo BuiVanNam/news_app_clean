@@ -1,4 +1,4 @@
-package com.nambv.demo.newsappdemo.common
+package com.nambv.demo.newsappdemo.ui.common
 
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding

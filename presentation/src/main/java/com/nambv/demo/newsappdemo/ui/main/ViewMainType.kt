@@ -1,4 +1,4 @@
-package com.nambv.demo.newsappdemo.main
+package com.nambv.demo.newsappdemo.ui.main
 
 /**
  * Created by nambv on 9/3/2020

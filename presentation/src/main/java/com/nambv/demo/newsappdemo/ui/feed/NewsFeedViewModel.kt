@@ -1,7 +1,7 @@
-package com.nambv.demo.newsappdemo.detail
+package com.nambv.demo.newsappdemo.ui.feed
 
 import androidx.lifecycle.SavedStateHandle
-import com.nambv.demo.newsappdemo.common.BaseViewModel
+import com.nambv.demo.newsappdemo.ui.common.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
@@ -9,6 +9,6 @@ import javax.inject.Inject
  * Created by nambv on 6/13/2021
  */
 @HiltViewModel
-class DetailViewModel @Inject constructor(
+class NewsFeedViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
 ) : BaseViewModel(savedStateHandle)

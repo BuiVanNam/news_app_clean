@@ -1,4 +1,4 @@
-package com.nambv.demo.newsappdemo.common
+package com.nambv.demo.newsappdemo.ui.common
 
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter

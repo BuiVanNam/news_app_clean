@@ -1,7 +1,7 @@
-package com.nambv.demo.newsappdemo.account
+package com.nambv.demo.newsappdemo.ui.account
 
 import androidx.lifecycle.SavedStateHandle
-import com.nambv.demo.newsappdemo.common.BaseViewModel
+import com.nambv.demo.newsappdemo.ui.common.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

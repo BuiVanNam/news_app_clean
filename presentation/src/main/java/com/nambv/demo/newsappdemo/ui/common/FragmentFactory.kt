@@ -1,10 +1,10 @@
-package com.nambv.demo.newsappdemo.common
+package com.nambv.demo.newsappdemo.ui.common
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import com.nambv.demo.newsappdemo.account.AccountFragment
-import com.nambv.demo.newsappdemo.feed.NewsFeedFragment
+import com.nambv.demo.newsappdemo.ui.account.AccountFragment
+import com.nambv.demo.newsappdemo.ui.feed.NewsFeedFragment
 import timber.log.Timber
 
 /**

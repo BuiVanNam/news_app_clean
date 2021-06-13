@@ -1,6 +1,7 @@
 package com.nambv.demo.data.model.feed
 
 import androidx.room.ColumnInfo
+import androidx.room.Ignore
 import com.google.gson.annotations.SerializedName
 import com.nambv.demo.domain.model.base.SectionImageModel
 
@@ -24,8 +25,8 @@ data class ContentThumbImage(
     @ColumnInfo(name = "height")
     @SerializedName("height")
     override val height: Int?,
-) : SectionImageModel {
 
+    ) : SectionImageModel {
+    @Ignore
     override val caption: String? = null
-
 }

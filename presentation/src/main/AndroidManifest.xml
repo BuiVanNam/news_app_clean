@@ -14,11 +14,11 @@
         android:theme="@style/Theme.NewsApp"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".detail.DetailNewActivity"
+            android:name="com.nambv.demo.newsappdemo.ui.detail.DetailNewActivity"
             android:theme="@style/Theme.DetailNew">
 
         </activity>
-        <activity android:name=".main.MainActivity">
+        <activity android:name="com.nambv.demo.newsappdemo.ui.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
