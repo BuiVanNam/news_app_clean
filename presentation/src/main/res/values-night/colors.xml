@@ -6,6 +6,7 @@
     <color name="colorBackground">#111111</color>
     <color name="colorPlaceHolder">#28FFFFFF</color>
     <color name="colorDivider">#000000</color>
+    <color name="colorBackgroundNav">#212121</color>
 
 
 </resources>

@@ -2,5 +2,6 @@
 <resources>
     <dimen name="padding_default">16dp</dimen>
     <dimen name="padding_small_default">8dp</dimen>
+    <dimen name="height_bottom_navigation">56dp</dimen>
 
 </resources>

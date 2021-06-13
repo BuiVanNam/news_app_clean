@@ -11,5 +11,6 @@
     <color name="colorBackground">#ffffff</color>
     <color name="colorPlaceHolder">#17000000</color>
     <color name="colorDivider">#17000000</color>
+    <color name="colorBackgroundNav">#ffffff</color>
 
 </resources>
