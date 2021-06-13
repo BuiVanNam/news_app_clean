@@ -3,12 +3,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_news"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="@string/new_feed_title"
+        android:clipToPadding="false" />
+
+    <ProgressBar
+        android:id="@+id/progress_load"
+        android:layout_width="@dimen/size_progress_load"
+        android:layout_height="@dimen/size_progress_load"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/padding_default" />
+
+    <TextView
+        android:id="@+id/text_status_load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/padding_default"
         android:textColor="@color/textColorPrimary"
-        android:textSize="16sp" />
+        android:textSize="18sp"
+        android:visibility="visible" />
 
 </FrameLayout>

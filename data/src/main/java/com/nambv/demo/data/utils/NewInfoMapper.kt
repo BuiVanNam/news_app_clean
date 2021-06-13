@@ -20,7 +20,11 @@ object NewInfoMapper : Mapper<NewInfoData, NewInfoModel> {
             from.originUrl,
             from.publisherNewModel,
             mapContentTypeNew(from.contentType),
-            from.avatarNew?.linkImage,
+            mainImage = from.avatarNew?.linkImage ?: if (from.listImages.isNullOrEmpty()) {
+                null
+            } else {
+                from.listImages[0].linkImage
+            },
             from.listImages?.filter {
                 it.linkImage != null
             }?.map {

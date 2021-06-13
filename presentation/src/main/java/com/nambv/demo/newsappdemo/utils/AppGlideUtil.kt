@@ -39,4 +39,5 @@ class AppGlideUtil : AppGlideModule() {
     }
 }
 
-const val DEFAULT_SIZE_LOAD_IMAGE = 400
+const val DEFAULT_SIZE_WIDTH_LOAD_IMAGE = 500
+const val DEFAULT_SIZE_HEIGHT_LOAD_IMAGE = 380
