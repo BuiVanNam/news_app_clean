@@ -1,6 +1,7 @@
 package com.nambv.demo.newsappdemo.ui.feed
 
 import androidx.lifecycle.SavedStateHandle
+import com.nambv.demo.domain.usecases.GetNewsUseCase
 import com.nambv.demo.newsappdemo.ui.common.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -11,4 +12,7 @@ import javax.inject.Inject
 @HiltViewModel
 class NewsFeedViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
-) : BaseViewModel(savedStateHandle)
+    private val newsUseCase: GetNewsUseCase
+) : BaseViewModel(savedStateHandle) {
+
+}
