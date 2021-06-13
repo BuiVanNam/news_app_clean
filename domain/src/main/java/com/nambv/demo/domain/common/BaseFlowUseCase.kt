@@ -7,6 +7,6 @@ import kotlinx.coroutines.flow.Flow
  */
 abstract class BaseFlowUseCase<R> {
 
-    protected abstract fun invoke(): Flow<ResourceData<out R>>
+    protected abstract fun invoke(): Flow<ResourceData<R>>
 
 }

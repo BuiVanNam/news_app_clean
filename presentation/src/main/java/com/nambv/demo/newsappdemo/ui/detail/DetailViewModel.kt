@@ -26,7 +26,7 @@ class DetailViewModel @Inject constructor(
     private val _detailNewFeed = useCase
         .getDetailNewData()
         .map {
-            ResourceDataDetailNewMapper.mapModel(it as ResourceData<DetailNewInfoModel>)
+            ResourceDataDetailNewMapper.mapModel(it)
         }
         .asLiveData(viewModelScope.coroutineContext)
 

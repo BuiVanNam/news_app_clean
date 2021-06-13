@@ -10,6 +10,6 @@ import kotlinx.coroutines.flow.Flow
  */
 interface DetailNewRepository {
 
-    fun getDetailNew(): Flow<ResourceData<out DetailNewInfoModel>>
+    fun getDetailNew(): Flow<ResourceData<DetailNewInfoModel>>
 
 }

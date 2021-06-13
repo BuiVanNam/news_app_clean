@@ -24,10 +24,11 @@ class DetailNewRepositoryImpl @Inject constructor(
     @DispatcherIO private val dispatcherIO: CoroutineDispatcher,
 ) : DetailNewRepository {
 
-    override fun getDetailNew(): Flow<ResourceData<out DetailNewInfoModel>> {
+    override fun getDetailNew(): Flow<ResourceData<DetailNewInfoModel>> {
         return flow {
+            val dataNull: DetailNewInfoModel? = null
             emit(
-                ResourceData.Loading(data = null)
+                ResourceData.Loading(data = dataNull)
             )
             val apiResponse: ApiResponse<DetailNewInfoData> = try {
                 withContext(dispatcherIO) {
@@ -45,7 +46,7 @@ class DetailNewRepositoryImpl @Inject constructor(
                 is ApiResponse.ApiError -> {
                     emit(
                         ResourceData.Error(
-                            data = null,
+                            data = dataNull,
                             message = "message: ${apiResponse.message} - code: ${apiResponse.code}"
                         )
                     )
