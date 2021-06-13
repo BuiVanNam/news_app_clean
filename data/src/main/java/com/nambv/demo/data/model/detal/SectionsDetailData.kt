@@ -1,5 +1,6 @@
 package com.nambv.demo.data.model.detal
 
+import com.google.gson.JsonObject
 import com.google.gson.annotations.SerializedName
 
 /**
@@ -10,5 +11,5 @@ data class SectionsDetailData(
     val sectionType: Int?,
 
     @SerializedName("content")
-    val content: String?,
+    val content: JsonObject?,
 )
