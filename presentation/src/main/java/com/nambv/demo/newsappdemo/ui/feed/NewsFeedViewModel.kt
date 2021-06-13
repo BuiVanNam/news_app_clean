@@ -9,6 +9,7 @@ import com.nambv.demo.domain.model.feed.NewInfoModel
 import com.nambv.demo.domain.usecases.GetNewsUseCase
 import com.nambv.demo.newsappdemo.ui.common.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
+import java.time.Duration
 import javax.inject.Inject
 
 /**
@@ -22,7 +23,7 @@ class NewsFeedViewModel @Inject constructor(
 
     private val _listNewsFeed = newsUseCase
         .getNewsData()
-        .asLiveData(viewModelScope.coroutineContext)
+        .asLiveData(viewModelScope.coroutineContext, timeout = Duration.ofDays(1))
 
     val listNewsFeed: LiveData<ResourceData<List<NewInfoModel>>>
         get() = _listNewsFeed
