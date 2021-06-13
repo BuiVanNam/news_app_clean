@@ -14,6 +14,6 @@ class ConvertersRoom {
 
     @TypeConverter
     fun jsonToListImage(value: String) =
-        Gson().fromJson(value, Array<ContentThumbImage>::class.java).toList()
+        Gson().fromJson(value, Array<ContentThumbImage>::class.java)?.toList()
 
 }

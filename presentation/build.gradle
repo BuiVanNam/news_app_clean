@@ -41,6 +41,7 @@ android {
 dependencies {
 
     implementation project(":domain")
+    implementation project(":data")
 
     //core
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -77,6 +78,11 @@ dependencies {
     //Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1"
+
+    //Room
+    implementation "androidx.room:room-runtime:2.3.0"
+    kapt "androidx.room:room-compiler:2.3.0"
+    implementation "androidx.room:room-ktx:2.3.0"
 
     //ktx
     implementation "androidx.activity:activity-ktx:1.2.3"
